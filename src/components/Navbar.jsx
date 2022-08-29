@@ -7,12 +7,12 @@ const NavbarComponent = () => {
     <>
     <header>
     <div className="menu">
-      <img src={velador} />
+      <img src={velador} alt=""/>
       <nav>
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/">Tienda</a></li>
+            <li><a href="/">Contacto</a></li>
           </ul>
       </nav>
     </div>

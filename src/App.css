@@ -63,3 +63,30 @@ nav ul li a::before {
 nav ul li a:hover::before {
   width: 100%;
 }
+
+.item-list{
+  justify-content: center;
+  height: 80px;
+  width: auto;
+  
+}
+
+.container-item{
+  float: left;
+  justify-content: space-between;
+  padding: 20px 30px 40px 20px;
+}
+
+.titulo{
+  color: #817e7e;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  text-shadow: 1px 2px 2px;
+}
+
+.container-user{
+  padding: 5px 5px 5px;
+  margin-left: 10px;
+}

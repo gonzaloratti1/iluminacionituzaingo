@@ -13,6 +13,7 @@ const NavbarComponent = () => {
             <li><a href="/">Inicio</a></li>
             <li><a href="/">Tienda</a></li>
             <li><a href="/">Contacto</a></li>
+            <li><a href="/">Mi Cuenta</a></li>
           </ul>
       </nav>
     </div>

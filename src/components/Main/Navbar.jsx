@@ -1,5 +1,5 @@
 import React from 'react'
-import velador from "../images/velador.png"
+import velador from "../../images/velador.png"
 
 
 const NavbarComponent = () => {

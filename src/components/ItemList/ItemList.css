@@ -1,0 +1,15 @@
+.container-fluid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-height: 500px;    
+    margin-left: 40px;
+    position: fixed;
+    flex-direction: column;
+}
+
+
+
+

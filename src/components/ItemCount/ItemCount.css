@@ -1,7 +1,24 @@
+
 .counter{
     width: fit-content;
-    background-color: grey;
-    margin: aut;
+    background-color: #c3c3c3 ;
+    
     padding: 1rem;
     text-align: center;
+}   
+
+.btn btn-danger{
+    height: fit-content;
+}
+
+.btn btn-success{
+    height: 100px;
+}
+
+bi-cart4{
+    height: auto;
+}
+
+.container-counter{
+    margin-left: auto;
 }

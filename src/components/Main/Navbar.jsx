@@ -1,23 +1,28 @@
 import React from 'react'
-import velador from "../../images/velador.png"
+import { AppBar, Toolbar, Typography } from '@mui/material'
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import { yellow } from '@mui/material/colors';
+
+
+const color = yellow[500]
+const colorMain = "#212121"
+
+
+
 
 
 const NavbarComponent = () => {
   return (
     <>
-    <header>
-    <div className="menu">
-      <img src={velador} alt=""/>
-      <nav>
-          <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/">Tienda</a></li>
-            <li><a href="/">Contacto</a></li>
-            <li><a href="/">Mi Cuenta</a></li>
-          </ul>
-      </nav>
-    </div>
-    </header>
+   <AppBar position="sticky" style={{backgroundColor:color}}>
+     <Toolbar>
+     <TipsAndUpdatesIcon margin={3} style={{ color: colorMain}}  />
+       <Typography variant="h4" margin={2}  color='black' align='center'>
+         Iluminacion Ituzaingo
+       </Typography>
+      
+     </Toolbar>
+   </AppBar>
     </>
   )
 }

@@ -1,32 +1,40 @@
-import React, { useState } from "react";
-import "./ItemCount.css"
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Items from "../Utils/itemData/ItemData";
+import React, { useState, useEffect } from "react";
 import Item from "../Item/Item";
+import "./ItemCount.css"
 
 
-export const ItemCount = ({initial, stock, onAdd, Items}) => {
+export const ItemCount = ({initial = 1, stock, onAdd}) => {
 
     const [ count, setCount ] = useState(initial)
 
-    const suma = () => {
+    useEffect(() => {
+       setCount(initial)
+    }, []);
+
+
+    const suma = () => { 
         setCount( count + 1)
     }
+    
 
     const resta = () => {
         setCount( count - 1)
     }
 
-    // forEach de stock de cada item.
-
 
     return (
         <div className="container-counter">
-        <p>{Item.cost}</p>
+        <strong>{Item.cost}</strong>
+
+        
         <div className="counter">
-        <i className="bi bi-cart4"></i> <button disabled={count <= 1} onClick={resta} className="btn btn-danger"> - </button>
-        <span>{count}</span>
-            <button disabled={count >= stock} onClick={suma} className="btn btn-success"> + </button>
+        <button disabled={count <= 1} onClick={resta} className="btn btn-danger"> - </button>
+        
+            <span>{count}</span>
+        
+        <button  disabled={ count >= stock} onClick={suma} className="btn btn-success"> + </button>
+
+
         <div>
             <button disabled={ stock <= 0} onClick={ () => onAdd(count)}> Agregar al carrito </button>
         </div>

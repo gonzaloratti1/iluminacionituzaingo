@@ -1,9 +1,19 @@
+import { Typography } from "@mui/material"
+
 import React from "react"
 
-export const Greetings = (props) => {
+const useStyles = {
+   fontFamily :  'Raleway, Arial',
+   textPosition: 'center',
+   
+}
+
+export const Greetings = () => {
     return (
-       <div className="container-user"> 
-        <h3>Bienvenido a nuestra Tienda, {props.user}!</h3>
+       <div> 
+         <Typography style={ useStyles } variant='h3'  align="center">
+            TIENDA
+         </Typography>
        </div>
     )
  }

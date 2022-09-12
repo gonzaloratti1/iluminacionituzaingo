@@ -1,0 +1,18 @@
+
+img{
+    
+    float: left;
+    left: 100px;
+    width: 200px;
+    margin-right: 1px;    
+}
+
+.cost{
+    color: green;
+}
+
+/* .itemcount{
+    align-items: center;
+    align-content: center;
+    position: relative;
+} */

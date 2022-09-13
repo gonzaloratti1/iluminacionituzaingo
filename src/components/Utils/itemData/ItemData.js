@@ -23,169 +23,168 @@ const Items = [
       },
       reviews: []
     }, 
-  // {
-  //       id: 3,
-  //      name: "Velador",
-  //       description: "40 Watts - Luz calida - Halogena. Para Interior.",
-  //        cost: 2500,
-  //        stock: 11,
-  //        image: ["https://d2r9epyceweg5n.cloudfront.net/stores/935/994/products/nurvi-velador1-251ecfe28f84b2f74715487814989602-640-0.png"],
-  //       sales: 0,
-  //          createdAt: "2022-08-15T05:11:04.952Z",
-  //       updatedAt: "2022-08-15T05:11:05.347Z",
-  //          categoryId: 3,
-  //          brandId: 43,
-  //          packingId: null,
-  //         category: {
-  //         name: "Exterior",
-  //          id: 3
-  //       },
-  //          brand: {
-  //            id: 2,
-  //           name: "Faroluz"
-  //        },
-  //        reviews: []
-  //      },
-  //        {
-  //            id: 4,
-  //           name: "Araña",
-  //          description: "50 Watts - Luz Fria - Halogena. Para Interior",
-  //         cost: 10000,
-  //         stock: 5,
-  //           image: ["https://http2.mlstatic.com/D_NQ_NP_723227-MLA31660085056_082019-O.jpg"],
-  //           sales: 3,
-  //             createdAt: "2022-08-15T05:11:04.952Z",
-  //              updatedAt: "2022-08-15T05:11:05.347Z",
-  //             categoryId: 6,
-  //              brandId: 25,
-  //            packingId: null,
-  //              category: {
-  //               name: "Interior",
-  //                id: 2
-  //             },
-  //              brand: {
-  //               id: 32,
-  //                name: "Faroluz"
-  //              },
-  //              reviews: []
-  //            },
-  //          {
-  //                id: 5,
-  //               name: "Velador de madera",
-  //                description: "20 Watts - Luz calida - Halogena. Para Interior. Marca: ABCDEFG",
-  //                cost: 12000,
-  //                stock: 13,
-  //              image: ["https://rwiluminacion.com/wp-content/uploads/2021/08/Lampara-Velador-Nordico.jpg"],
-  //                sales: 3,
-  //                  createdAt: "2022-08-15T05:11:04.952Z",
-  //                  updatedAt: "2022-08-15T05:11:05.347Z",
-  //                  categoryId: 10,
-  //                 brandId: 25,
-  //                  packingId: null,
-  //                  category: {
-  //                    name: "Interior",
-  //                    id: 2
-  //                  },
-  //                  brand: {
-  //                    id: 12,
-  //                   name: "Antares"
-  //                  },
-  //                  reviews: []
-  //            },
-    //             {
-    //                 id: 6,
-    //                 name: "Colgante",
-    //                 description: "20 Watts - Luz calida - Halogena. Para Interior. Marca: ABCDEFG",
-    //                 cost: 5000,
-    //                 stock: 20,
-    //                 image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
-    //                 sales: 3,
-    //                   createdAt: "2022-08-15T05:11:04.952Z",
-    //                   updatedAt: "2022-08-15T05:11:05.347Z",
-    //                   categoryId: 5,
-    //                   brandId: 25,
-    //                   packingId: null,
-    //                   category: {
-    //                     name: "Exterior",
-    //                     id: 2
-    //                   },
-    //                   brand: {
-    //                     id: 2,
-    //                     name: "Faroluz"
-    //                   },
-    //                   reviews: []
-    //                 },
-    //                 {
-    //                     id: 7,
-    //                     name: "Spot de Embutir",
-    //                     description: "20 Watts - Luz Fria",
-    //                     cost: 5000,
-    //                     stock: 20,
-    //                     image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
-    //                     sales: 0,
-    //                       createdAt: "2022-08-15T05:11:04.952Z",
-    //                       updatedAt: "2022-08-15T05:11:05.347Z",
-    //                       categoryId: 5,
-    //                       brandId: 25,
-    //                       packingId: null,
-    //                       category: {
-    //                         name: "Exterior",
-    //                         id: 2
-    //                       },
-    //                       brand: {
-    //                         id: 2,
-    //                         name: "Candil"
-    //                       },
-    //                       reviews: []
-    //                     }, */
-    //                     {
-    //                         id: 8,
-    //                         name: "Lampara Vintage",
-    //                         description: "20 Watts - Luz calida ",
-    //                         cost: 1000,
-    //                         stock: 10,
-    //                         image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
-    //                         sales: 3,
-    //                           createdAt: "2022-08-15T05:11:04.952Z",
-    //                           updatedAt: "2022-08-15T05:11:05.347Z",
-    //                           categoryId: 5,
-    //                           brandId: 25,
-    //                           packingId: null,
-    //                           category: {
-    //                             name: "Exterior",
-    //                             id: 23
-    //                           },
-    //                           brand: {
-    //                             id: 12,
-    //                             name: "Faroluz"
-    //                           },
-    //                           reviews: []
-    //                         },
-    //                         {
-    //                             id: 9,
-    //                             name: "Araña",
-    //                             description: "120 Watts - Luz Fria ",
-    //                             cost: 13000,
-    //                             stock: 4,
-    //                             image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
-    //                             sales: 3,
-    //                               createdAt: "2022-08-15T05:11:04.952Z",
-    //                               updatedAt: "2022-08-15T05:11:05.347Z",
-    //                               categoryId: 5,
-    //                               brandId: 25,
-    //                               packingId: null,
-    //                               category: {
-    //                                 name: "Interior",
-    //                                 id: 23
-    //                               },
-    //                               brand: {
-    //                                 id: 12,
-    //                                 name: "Antares"
-    //                               },
-    //                               reviews: []
-    //                             },
-    
-
+  {
+        id: 3,
+       name: "Velador",
+        description: "40 Watts - Luz calida - Halogena. Para Interior.",
+         cost: 2500,
+         stock: 11,
+         image: ["https://d2r9epyceweg5n.cloudfront.net/stores/935/994/products/nurvi-velador1-251ecfe28f84b2f74715487814989602-640-0.png"],
+        sales: 0,
+           createdAt: "2022-08-15T05:11:04.952Z",
+        updatedAt: "2022-08-15T05:11:05.347Z",
+           categoryId: 3,
+           brandId: 43,
+           packingId: null,
+          category: {
+          name: "Exterior",
+           id: 3
+        },
+           brand: {
+             id: 2,
+            name: "Faroluz"
+         },
+         reviews: []
+       },
+         {
+             id: 4,
+            name: "Araña",
+           description: "50 Watts - Luz Fria - Halogena. Para Interior",
+          cost: 10000,
+          stock: 5,
+            image: ["https://http2.mlstatic.com/D_NQ_NP_723227-MLA31660085056_082019-O.jpg"],
+            sales: 3,
+              createdAt: "2022-08-15T05:11:04.952Z",
+               updatedAt: "2022-08-15T05:11:05.347Z",
+              categoryId: 6,
+               brandId: 25,
+             packingId: null,
+               category: {
+                name: "Interior",
+                 id: 2
+              },
+               brand: {
+                id: 32,
+                 name: "Faroluz"
+               },
+               reviews: []
+             },
+           {
+                 id: 5,
+                name: "Velador de madera",
+                 description: "20 Watts - Luz calida - Halogena. Para Interior. Marca: ABCDEFG",
+                 cost: 12000,
+                 stock: 13,
+               image: ["https://rwiluminacion.com/wp-content/uploads/2021/08/Lampara-Velador-Nordico.jpg"],
+                 sales: 3,
+                   createdAt: "2022-08-15T05:11:04.952Z",
+                   updatedAt: "2022-08-15T05:11:05.347Z",
+                   categoryId: 10,
+                  brandId: 25,
+                   packingId: null,
+                   category: {
+                     name: "Interior",
+                     id: 2
+                   },
+                   brand: {
+                     id: 12,
+                    name: "Antares"
+                   },
+                   reviews: []
+             },
+                {
+                    id: 6,
+                    name: "Colgante",
+                    description: "20 Watts - Luz calida - Halogena. Para Interior. Marca: ABCDEFG",
+                    cost: 5000,
+                    stock: 20,
+                    image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
+                    sales: 3,
+                      createdAt: "2022-08-15T05:11:04.952Z",
+                      updatedAt: "2022-08-15T05:11:05.347Z",
+                      categoryId: 5,
+                      brandId: 25,
+                      packingId: null,
+                      category: {
+                        name: "Exterior",
+                        id: 2
+                      },
+                      brand: {
+                        id: 2,
+                        name: "Faroluz"
+                      },
+                      reviews: []
+                    },
+                    {
+                        id: 7,
+                        name: "Spot de Embutir",
+                        description: "20 Watts - Luz Fria",
+                        cost: 5000,
+                        stock: 20,
+                        image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
+                        sales: 0,
+                          createdAt: "2022-08-15T05:11:04.952Z",
+                          updatedAt: "2022-08-15T05:11:05.347Z",
+                          categoryId: 5,
+                          brandId: 25,
+                          packingId: null,
+                          category: {
+                            name: "Exterior",
+                            id: 2
+                          },
+                          brand: {
+                            id: 2,
+                            name: "Candil"
+                          },
+                          reviews: []
+                        }, 
+                        {
+                            id: 8,
+                            name: "Lampara Vintage",
+                            description: "20 Watts - Luz calida ",
+                            cost: 1000,
+                            stock: 10,
+                            image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
+                            sales: 3,
+                              createdAt: "2022-08-15T05:11:04.952Z",
+                              updatedAt: "2022-08-15T05:11:05.347Z",
+                              categoryId: 5,
+                              brandId: 25,
+                              packingId: null,
+                              category: {
+                                name: "Exterior",
+                                id: 23
+                              },
+                              brand: {
+                                id: 12,
+                                name: "Faroluz"
+                              },
+                              reviews: []
+                            },
+                            {
+                                id: 9,
+                                name: "Araña",
+                                description: "120 Watts - Luz Fria ",
+                                cost: 13000,
+                                stock: 4,
+                                image: ["https://w4v8q6r3.rocketcdn.me/wp-content/uploads/2020/01/led-top-mirror-globe-oro-95-o-14-h-425456-bombilla-la-casa-de-la-lampara-247x300.jpg"],
+                                sales: 3,
+                                  createdAt: "2022-08-15T05:11:04.952Z",
+                                  updatedAt: "2022-08-15T05:11:05.347Z",
+                                  categoryId: 5,
+                                  brandId: 25,
+                                  packingId: null,
+                                  category: {
+                                    name: "Interior",
+                                    id: 23
+                                  },
+                                  brand: {
+                                    id: 12,
+                                    name: "Antares"
+                                  },
+                                  reviews: []
+                                },
+                              ]
 
 
 
@@ -283,6 +282,6 @@ const Items = [
 //     cost: 1,
 //     stock: 10
 // }
-]
+
 
 export default Items

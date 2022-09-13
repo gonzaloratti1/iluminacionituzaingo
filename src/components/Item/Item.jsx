@@ -2,6 +2,8 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css"
 import Card from 'react-bootstrap/Card';
+import { Link } from "@mui/material";
+// import { Link} from 'react-router-dom'
 
 const Item = ({ id, name, image, cost, stock}) => {
   
@@ -28,6 +30,7 @@ const Item = ({ id, name, image, cost, stock}) => {
         </Card.Text>
         <ItemCount initial={1} stock={stock} onAdd={onAdd} className="itemcount"/>
       </Card.Body>
+      <Link to={`/item/${id}`}>Detalle</Link>
     </Card>
         
     )

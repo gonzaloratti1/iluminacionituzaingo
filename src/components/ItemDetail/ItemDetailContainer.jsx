@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
+import customFetch from '../Utils/itemData/CustomFetch/CustomFetch'
 import ItemDetail from './ItemDetail'
-
+import { useParams } from 'react-router-dom'
 
 const Items = {
     id: 1,
@@ -30,15 +31,14 @@ const Items = {
 const ItemDetailContainer = () => {
   
     const [ data, setData] = useState({})
+    const { idItem} = useParams()
+
 
     useEffect( () => {
-        const getProducts = new Promise( res => {
-            setTimeout( () =>{
-                res(Items)
-            }, 3000)
-        })
-        getProducts.then( res => setData(res))
-    })
+      customFetch(2000, Items.find( item => item.id == idItem))
+      .then( result  => setData(result))
+      .catch( err => console.log(err))
+    }, [idItem])
   
   
   

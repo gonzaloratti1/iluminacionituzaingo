@@ -3,46 +3,57 @@ import { AppBar, Menu, MenuItem, Toolbar, Typography, Button, Box } from '@mui/m
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import { yellow } from '@mui/material/colors';
 import { Link } from 'react-router-dom'
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Stack from '@mui/material/stack'
+import Home from "../pages/Home"
+import { useState } from 'react';
+
 
 const color = yellow[500]
 const colorMain = "#212121"
-
-const center ={
-  alignItems: 'center',
-  justifyContent: 'center',
-  textAlign: 'center',
-  float: 'center'
+const buttonBG = {
+  background: " #9e9e9e"
 }
 
+
 const NavbarComponent = () => {
+
+  const [ filterId, setFilterId] = useState()
+
+  const handleClickFilter  = ( e ) => {
+    setFilterId( e )
+  }
+
+  console.log(filterId)
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
     <AppBar position="static" style={{ backgroundColor: color}} >
       <Toolbar>
-      <TipsAndUpdatesIcon  style={{ color: colorMain}}/>
+     <Link to='/'><TipsAndUpdatesIcon  style={{ color: colorMain}}/></Link>
         <Typography variant="h4" component="div" color='black' sx={{ flexGrow: 1 }} marginLeft={2}>
           Iluminacion Ituzaingo
         </Typography>
+
         <Stack direction='row' spacing={2} marginRight={70}>
-          <Button>
+          <Link  to="/category/10" onClick={(e => handleClickFilter( "10" ))}><Button>
             <Typography color='black'>LAMPARAS</Typography>
-          </Button>
-          <Button>
+          </Button></Link>
+
+          <Link to='/category/3'><Button>
             <Typography color='black'>INTERIOR</Typography>
-          </Button>
-          <Button>
+          </Button></Link>
+
+         <Link  to='/category/2'><Button>
             <Typography color='black'>EXTERIOR</Typography>
-          </Button>
+          </Button></Link>
         </Stack>
-        <Button color="inherit">
+        <Button sx={ buttonBG} variant='contained' marginRight={5} padding="20px 30px">
           <Typography color='black'>
             INGRESAR
           </Typography>
         </Button>
-        <Button color="inherit">
+        <Button sx={ buttonBG} variant='contained'>
           <Typography color='black'>
             REGISTRARSE
           </Typography>

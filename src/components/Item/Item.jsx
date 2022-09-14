@@ -2,19 +2,14 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css"
 import Card from 'react-bootstrap/Card';
-import { Link } from "@mui/material";
-// import { Link} from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap';
+import { Link, NavLink } from 'react-router-dom'
+import { Button } from "bootstrap";
+import { Navbar, Nav, Form, FormControl, NavItem } from 'react-bootstrap';
+import { Switch, Route } from 'react-router-dom';
 
 const Item = ({ id, name, image, cost, stock}) => {
   
-  
-    const imgStyles = {
-    heigth: '350px',
-    width: '100px',
-   
-  }
-
- 
   const onAdd = (count) =>{
     console.log(`Compraste ${count} unidades`)
   }
@@ -30,7 +25,7 @@ const Item = ({ id, name, image, cost, stock}) => {
         </Card.Text>
         <ItemCount initial={1} stock={stock} onAdd={onAdd} className="itemcount"/>
       </Card.Body>
-      <Link to={`/item/${id}`}>Detalle</Link>
+      <Nav.Link href={`/item/${id}`}>Detalles</Nav.Link>
     </Card>
         
     )
@@ -38,3 +33,7 @@ const Item = ({ id, name, image, cost, stock}) => {
 }
 
 export default Item
+
+// 
+
+

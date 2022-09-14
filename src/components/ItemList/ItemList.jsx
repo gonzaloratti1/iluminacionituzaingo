@@ -1,18 +1,20 @@
 import React from 'react'
 import Item from '../Item/Item'
-import Items from '../Utils/itemData/ItemData'
-import { useState, useEffect } from 'react'
-import customFetch from '../Utils/itemData/CustomFetch/CustomFetch'
+import items from '../Utils/itemData/ItemData'
+
 
 const ItemList = ({ items }) => {
+  console.log(items)
   return (
       <>
       {
-          Items.length > 0
-          ? Items.map(item => <Item key={item.id} id={item.id} title={item.name} cost={item.cost} image={item.image[0]} stock={item.stock} />)
+          Array.isArray(items)
+          ? items.map(item => <Item key={item.id} id={item.id} title={item.name} cost={item.cost} image={item.image[0]} stock={item.stock} categoryId={item.categoryId} />)
           : <p>Cargando...</p>
       }
+      
       </>
+      
   );
 }
 

@@ -1,42 +1,34 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import customFetch from "../Utils/itemData/CustomFetch/CustomFetch"
-import Item from "../Item/Item"
 import "./ItemList.css"
 import { useParams } from "react-router-dom"
-import ItemDetail from "../ItemDetail/ItemDetail"
 import ItemList from "../ItemList/ItemList"
-
-
-const  {Items} = require('../Utils/itemData/ItemData')
-
+import Items from "../Utils/itemData/ItemData"
+import Item from "../Item/Item"
 
 const ItemListContainer = () => {
 
-    const [data, setData] = useState([])
+    const [datos, setDatos] = useState([])
     const { idCategory } = useParams()
 
-    
-    useEffect( () =>{
-        if (idCategory){
-            customFetch(2000, Items.filter( item => item.categoryId  == idCategory))
-            .then( result => setData(result))
-            .catch( err =>  console.log(err))  
-        } else{
-        customFetch(2000, Items)
-        .then( result => setData(result))
-        .catch( err =>  console.log(err))  
-        }
-    }, [ idCategory])
-   
 
-    const onAdd = (quantity) => {
-        alert("Has seleccionado" + quantity + "items")
-    }
+
+    useEffect(() => {
+        customFetch(2000, Items.filter(item => {
+            if (idCategory === undefined) return item;
+            return item.categoryId === idCategory
+        }))
+            .then(result => setDatos(result))
+            .catch(err => console.log(err))
+    }, [idCategory]);
+
+
+    console.log(datos)
 
     return (
     <>
-        <ItemList items={data} />
+        <ItemList items={datos} />
     </>
     )
 }

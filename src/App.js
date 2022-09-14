@@ -11,8 +11,7 @@ const App = () => {
   
   return (
     <>
-    <NavbarComponent/>
-   <ItemListContainer></ItemListContainer>
+    <Home/>
     </>
 
   );

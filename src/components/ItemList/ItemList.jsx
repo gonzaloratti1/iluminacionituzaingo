@@ -4,7 +4,7 @@ import items from '../Utils/itemData/ItemData'
 
 
 const ItemList = ({ items }) => {
-  console.log(items)
+  
   return (
       <>
       {

@@ -7,7 +7,6 @@ const useStyles = {
    textPosition: 'center',
    
 }
-
 export const Greetings = () => {
     return (
        <div> 

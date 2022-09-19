@@ -3,13 +3,18 @@ import Item from "../Item/Item";
 import "./ItemCount.css"
 
 
-export const ItemCount = ({initial = 1, stock, onAdd}) => {
+export const ItemCount = ({initial, stock, onAdd}) => {
 
     const [ count, setCount ] = useState(initial)
 
+    // const showButton = (e) =>{
+    //     e.show('click')
+    // }
+
     useEffect(() => {
-       setCount(initial)
+       setCount(0)
     }, []);
+
 
 
     const suma = () => { 
@@ -21,11 +26,14 @@ export const ItemCount = ({initial = 1, stock, onAdd}) => {
         setCount( count - 1)
     }
 
+    const showButton = (showBtn) => {
+        showBtn.addEventListener('click')
+        showBtn.show()
+    }
+
 
     return (
         <div className="container-counter">
-        <strong>{Item.cost}</strong>
-
         
         <div className="counter">
         <button disabled={count <= 1} onClick={resta} className="btn btn-danger"> - </button>
@@ -33,13 +41,13 @@ export const ItemCount = ({initial = 1, stock, onAdd}) => {
             <span>{count}</span>
         
         <button  disabled={ count >= stock} onClick={suma} className="btn btn-success"> + </button>
-
-
-        <div>
-            <button disabled={ stock <= 0} onClick={ () => onAdd(count)}> Agregar al carrito </button>
-        </div>
-        
-        </div>
+            
+            {
+                stock && count
+            ?    <button onClick={ () => onAdd(showButton)}> Agregar al carrito </button>
+            :    <button disabled>Agregar al carrito</button>
+            }
+            </div>
         </div>
     )
 }

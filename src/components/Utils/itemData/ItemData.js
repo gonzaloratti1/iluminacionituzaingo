@@ -41,6 +41,27 @@ const Items = [
          reviews: []
 },
 {
+    id: 2,
+    name: "Lampara",
+    description: "15 Watts - Luz calida - Halogena. Para Interior. Marca: ABCDEFG",
+    cost: 500,
+    stock: 4,
+    image: [
+      "https://www.bultor.com.ar/wp-content/uploads/2019/10/LAM09CE.jpg"
+    ],
+    sales: 5,
+    createdAt: "2022-08-15T05:11:04.952Z",
+    updatedAt: "2022-08-15T05:11:05.347Z",
+    categoryId: "10",
+    brandId: 95,
+    packingId: null,
+    brand: {
+      id: 95,
+      name: "Interelec"
+      
+    },
+}, 
+{
     id: 4,
     name: "Araña",
     description: "50 Watts - Luz Fria - Halogena. Para Interior",

@@ -24,12 +24,12 @@ const ItemListContainer = () => {
     }, [idCategory]);
 
 
-    console.log(datos)
+    
 
     return (
-    <>
+        <div className="item-list">
         <ItemList items={datos} />
-    </>
+        </div>
     )
 }
 

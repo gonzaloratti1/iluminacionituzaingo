@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Stack from '@mui/material/stack'
 import Home from "../pages/Home"
 import { useState } from 'react';
-
+import LocalMallIcon from '@mui/icons-material/LocalMall';
 
 const color = yellow[500]
 const colorMain = "#212121"
@@ -23,7 +23,7 @@ const NavbarComponent = () => {
     setFilterId( e )
   }
 
-  console.log(filterId)
+  
 
 
   return (
@@ -35,7 +35,7 @@ const NavbarComponent = () => {
           Iluminacion Ituzaingo
         </Typography>
 
-        <Stack direction='row' spacing={2} marginRight={70}>
+        <Stack direction='row' spacing={1} marginRight={100}>
           <Link  to="/category/10" onClick={(e => handleClickFilter( "10" ))}><Button>
             <Typography color='black'>LAMPARAS</Typography>
           </Button></Link>
@@ -48,16 +48,7 @@ const NavbarComponent = () => {
             <Typography color='black'>EXTERIOR</Typography>
           </Button></Link>
         </Stack>
-        <Button sx={ buttonBG} variant='contained' marginRight={5} padding="20px 30px">
-          <Typography color='black'>
-            INGRESAR
-          </Typography>
-        </Button>
-        <Button sx={ buttonBG} variant='contained'>
-          <Typography color='black'>
-            REGISTRARSE
-          </Typography>
-        </Button>
+        <LocalMallIcon style={{ color: 'black', marginRight:'25px'}}></LocalMallIcon>
       </Toolbar>
     </AppBar>
   </Box>

@@ -9,6 +9,13 @@ img{
 
 .cost{
     color: green;
+    position: relative;
+
+}
+
+.titulo{
+    font-size: medium;
+    color: black;
 }
 
 /* .itemcount{

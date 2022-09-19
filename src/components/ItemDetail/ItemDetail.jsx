@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState} from 'react'
+import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
+import Item from '../Item/Item'
+import Items from '../Utils/itemData/ItemData'
+import ItemList from '../ItemList/ItemList'
+import "./ItemDetail.css"
 
 
-const ItemDetail = ({ item}) => {
+const ItemDetail = ({ item, initial }) => {
+
+    const [showCart, setShowCart] = useState(false)
+      
+    const onAdd = (count) => {
+        setShowCart(true)
+    }
 
     return (
 
@@ -16,6 +28,13 @@ const ItemDetail = ({ item}) => {
                         <p>{item.description}</p>
                         <img src={item.image}></img>
                         <strong className='cost'>${item.cost}</strong>
+                        
+                        {
+                            showCart
+                         ? <Link to='/cart' style={{ textDecoration:'none'}}><button className='check' value="showBtn">Checkout</button></Link> 
+                         :  <ItemCount  stock={item.stock} initial={initial} onAdd={onAdd}   />
+                        }
+                       
                     </div>
                 </div>
             </div>

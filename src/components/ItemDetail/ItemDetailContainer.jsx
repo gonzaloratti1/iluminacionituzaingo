@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     const { idItem } = useParams()
 
   useEffect( () => {
-    customFetch(2000, Items.find( item => item.id == idItem))
+    customFetch(1, Items.find( item => item.id == idItem))
     .then( result => setDato(result))
     .catch( err => console.log(err))
   },  [idItem]) 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Menu, MenuItem, Toolbar, Typography, Button, Box } from '@mui/material'
+import { AppBar, Menu, MenuItem, Toolbar, Typography, Button, Box, Badge } from '@mui/material'
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import { yellow } from '@mui/material/colors';
 import { Link } from 'react-router-dom'
@@ -48,7 +48,9 @@ const NavbarComponent = () => {
             <Typography color='black'>EXTERIOR</Typography>
           </Button></Link>
         </Stack>
-        <LocalMallIcon style={{ color: 'black', marginRight:'25px'}}></LocalMallIcon>
+        <Badge badgeContent={4} color="primary">
+        <LocalMallIcon style={{ color: 'black'}}/>
+        </Badge>
       </Toolbar>
     </AppBar>
   </Box>

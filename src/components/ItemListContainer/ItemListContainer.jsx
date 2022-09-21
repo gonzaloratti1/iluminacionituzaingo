@@ -15,7 +15,7 @@ const ItemListContainer = () => {
 
 
     useEffect(() => {
-        customFetch(2000, Items.filter(item => {
+        customFetch(1, Items.filter(item => {
             if (idCategory === undefined) return item;
             return item.categoryId === idCategory
         }))

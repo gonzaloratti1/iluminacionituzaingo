@@ -2,7 +2,7 @@
 const Items = [
 {
     id: 1,
-    name: "Lampara",
+    name: "Lampara de 15w",
     description: "15 Watts - Luz calida - Halogena. Para Interior. Marca: ABCDEFG",
     cost: 1000,
     stock: 4,
@@ -42,7 +42,7 @@ const Items = [
 },
 {
     id: 2,
-    name: "Lampara",
+    name: "Lampara de 13w",
     description: "15 Watts - Luz calida - Halogena. Para Interior. Marca: ABCDEFG",
     cost: 500,
     stock: 4,
@@ -197,7 +197,7 @@ const Items = [
                                 },
   {
     id: 10,
-    name: "Lampara Calida",
+    name: "Lampara Vintage",
     description: "40 Watts - Luz calida - Halogena. Para Interior.",
     cost: 2500,
     stock: 9,

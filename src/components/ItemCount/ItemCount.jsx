@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Item from "../Item/Item";
 import "./ItemCount.css"
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 
 export const ItemCount = ({initial, stock, onAdd}) => {
 
     const [ count, setCount ] = useState(initial)
 
-    // const showButton = (e) =>{
-    //     e.show('click')
-    // }
+    
 
     useEffect(() => {
-       setCount(0)
+       setCount(initial)
     }, []);
 
 
@@ -26,10 +25,6 @@ export const ItemCount = ({initial, stock, onAdd}) => {
         setCount( count - 1)
     }
 
-    const showButton = (showBtn) => {
-        showBtn.addEventListener('click')
-        showBtn.show()
-    }
 
 
     return (
@@ -44,7 +39,7 @@ export const ItemCount = ({initial, stock, onAdd}) => {
             
             {
                 stock && count
-            ?    <button onClick={ () => onAdd(showButton)}> Agregar al carrito </button>
+            ?    <button onClick={ () => onAdd(count)}> Agregar al carrito </button>
             :    <button disabled>Agregar al carrito</button>
             }
             </div>

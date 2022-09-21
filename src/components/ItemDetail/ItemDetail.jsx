@@ -1,18 +1,26 @@
-import React, { useState} from 'react'
+import React, { useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import Item from '../Item/Item'
 import Items from '../Utils/itemData/ItemData'
 import ItemList from '../ItemList/ItemList'
 import "./ItemDetail.css"
+import { CartContext } from '../CartContext/CartContext'
+import { useCartContext } from '../CartContext/CartContext'
 
-
-const ItemDetail = ({ item, initial }) => {
+const ItemDetail = ({ item }) => {
 
     const [showCart, setShowCart] = useState(false)
-      
-    const onAdd = (count) => {
-        setShowCart(true)
+    const [ itemCount, setItemCount] = useState(0)
+    const { addItem } = useCartContext();
+
+  
+
+    const onAdd = ( quantity) => {
+        alert("Seleccionaste " + quantity + " items")
+        setItemCount(quantity)
+        addItem(item)
+        console.log(item)
     }
 
     return (
@@ -30,9 +38,9 @@ const ItemDetail = ({ item, initial }) => {
                         <strong className='cost'>${item.cost}</strong>
                         
                         {
-                            showCart
-                         ? <Link to='/cart' style={{ textDecoration:'none'}}><button className='check' value="showBtn">Checkout</button></Link> 
-                         :  <ItemCount  stock={item.stock} initial={initial} onAdd={onAdd}   />
+                            itemCount === 0
+                         ? <ItemCount  stock={item.stock} initial={itemCount} onAdd={onAdd}   /> 
+                         :  <Link to='/cart' style={{ textDecoration:'none'}}><button>Checkout</button></Link> 
                         }
                        
                     </div>

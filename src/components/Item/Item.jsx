@@ -5,6 +5,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Link } from '@mui/material';
 import Items from '../Utils/itemData/ItemData';
+import CartContextProvider from '../CartContext/CartContext';
+import { CartContext } from '../CartContext/CartContext';
+import { NavLink } from 'react-router-dom';
+
 
 const Item = ({ id, name, image, cost, stock, description}) => {
   
@@ -49,9 +53,9 @@ const Item = ({ id, name, image, cost, stock, description}) => {
     </CardActionArea>
     <CardActions>
 
-    <Link href={`/item/${id}`} ><Button size="medium" color="primary">
+    <NavLink to={`/item/${id}`} ><Button size="medium" color="primary">
         DETALLES
-      </Button></Link>  
+      </Button></NavLink>  
     </CardActions>
   </Card>
     )

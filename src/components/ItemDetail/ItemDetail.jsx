@@ -10,7 +10,7 @@ import { useCartContext } from '../CartContext/CartContext'
 
 const ItemDetail = ({ item }) => {
 
-    const [showCart, setShowCart] = useState(false)
+    
     const [ itemCount, setItemCount] = useState(0)
     const { addItem } = useCartContext();
 
@@ -19,7 +19,7 @@ const ItemDetail = ({ item }) => {
     const onAdd = ( quantity) => {
         alert("Seleccionaste " + quantity + " items")
         setItemCount(quantity)
-        addItem(item)
+        addItem(item, quantity)
         console.log(item)
     }
 

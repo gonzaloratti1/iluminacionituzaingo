@@ -5,8 +5,9 @@ import { yellow } from '@mui/material/colors';
 import { Link } from 'react-router-dom'
 import Stack from '@mui/material/stack'
 import Home from "../pages/Home"
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
+import { CartContext } from '../CartContext/CartContext';
 
 const color = yellow[500]
 const colorMain = "#212121"
@@ -23,7 +24,7 @@ const NavbarComponent = () => {
     setFilterId( e )
   }
 
-  
+  const { totalProducts} = useContext(CartContext)
 
 
   return (
@@ -48,7 +49,7 @@ const NavbarComponent = () => {
             <Typography color='black'>EXTERIOR</Typography>
           </Button></Link>
         </Stack>
-        <Badge badgeContent={4} color="primary">
+        <Badge badgeContent={totalProducts()} color="primary">
         <LocalMallIcon style={{ color: 'black'}}/>
         </Badge>
       </Toolbar>

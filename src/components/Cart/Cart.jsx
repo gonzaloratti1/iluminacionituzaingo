@@ -1,10 +1,7 @@
 import React from 'react'
 import { useContext } from 'react';
-import { clearAll } from '@mui/icons-material';
 import CartItem from '../CartItem/CartItem';
-import { CartContext, useCartContext } from '../CartContext/CartContext';
-import CartContextProvider from '../CartContext/CartContext';
-import ItemDetail from '../ItemDetail/ItemDetail';
+import { CartContext } from '../CartContext/CartContext';
 import { NavLink } from 'react-router-dom';
 
 
@@ -39,6 +36,7 @@ const Cart = () => {
           cartList.map(item => <CartItem key={item.id} item={item}/>)
           }
         </div>
+        <p>Total: ${totalPrice()}</p>
       </>
   )
   }

@@ -1,11 +1,10 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import customFetch from "../Utils/itemData/CustomFetch/CustomFetch"
 import "./ItemList.css"
 import { useParams } from "react-router-dom"
 import ItemList from "../ItemList/ItemList"
-import Items from "../Utils/itemData/ItemData"
-import Item from "../Item/Item"
+import  { firestoreFetch}   from '../Utils/FirestoreFetch'
+
 
 const ItemListContainer = () => {
 
@@ -13,18 +12,24 @@ const ItemListContainer = () => {
     const { idCategory } = useParams()
 
 
-
     useEffect(() => {
-        customFetch(1, Items.filter(item => {
-            if (idCategory === undefined) return item;
-            return item.categoryId === idCategory
-        }))
-            .then(result => setDatos(result))
-            .catch(err => console.log(err))
+        firestoreFetch(idCategory)
+        .then(result => setDatos(result))
+        .catch(err => console.log(err))
     }, [idCategory]);
 
 
+
     
+    // useEffect(() => { // la de siempre
+    //     customFetch(1, Items.filter(item => {
+    //         if (idCategory === undefined) return item;
+    //         return item.categoryId === idCategory
+    //     }))
+    //         .then(result => setDatos(result))
+    //         .catch(err => console.log(err))
+    // }, [idCategory]);
+
 
     return (
         <div className="item-list">

@@ -1,28 +1,20 @@
 import React from 'react'
-import { AppBar, Menu, MenuItem, Toolbar, Typography, Button, Box, Badge } from '@mui/material'
+import { AppBar, Toolbar, Typography, Button, Box, Badge } from '@mui/material'
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import { yellow } from '@mui/material/colors';
 import { Link } from 'react-router-dom'
 import Stack from '@mui/material/stack'
-import Home from "../pages/Home"
 import { useState, useContext } from 'react';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import { CartContext } from '../CartContext/CartContext';
 
 const color = yellow[500]
 const colorMain = "#212121"
-const buttonBG = {
-  background: " #9e9e9e"
-}
 
 
 const NavbarComponent = () => {
 
-  const [ filterId, setFilterId] = useState()
 
-  const handleClickFilter  = ( e ) => {
-    setFilterId( e )
-  }
 
   const { totalProducts} = useContext(CartContext)
 
@@ -37,7 +29,7 @@ const NavbarComponent = () => {
         </Typography>
 
         <Stack direction='row' spacing={1} marginRight={100}>
-          <Link  to="/category/10" onClick={(e => handleClickFilter( "10" ))}><Button>
+          <Link  to="/category/10"><Button>
             <Typography color='black'>LAMPARAS</Typography>
           </Button></Link>
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { CartContext, useCartContext } from '../CartContext/CartContext'
-import Items from '../Utils/itemData/ItemData'
 
 const CartItem = ({ item }) => {
   

@@ -1,11 +1,9 @@
 import React, { useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
-import Item from '../Item/Item'
-import Items from '../Utils/itemData/ItemData'
-import ItemList from '../ItemList/ItemList'
+
 import "./ItemDetail.css"
-import { CartContext } from '../CartContext/CartContext'
+
 import { useCartContext } from '../CartContext/CartContext'
 
 const ItemDetail = ({ item }) => {
@@ -47,7 +45,7 @@ const ItemDetail = ({ item }) => {
                 </div>
             </div>
             :
-            <p>Cargando...</p>
+            <p>Cargando...123</p>
         }
     </>
   

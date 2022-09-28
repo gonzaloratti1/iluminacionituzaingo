@@ -1,8 +1,5 @@
 import { createContext, useState, useContext } from "react";
 import React from "react";
-import ItemList from "../ItemList/ItemList";
-import Item from "../Item/Item";
-import Items from "../Utils/itemData/ItemData";
 
 
 export const useCartContext = () => useContext(CartContext)
@@ -12,7 +9,7 @@ export const CartContext = createContext()
 const CartContextProvider = ({ children }) => {
 
     const [cartList, setCartList] = useState([]);
-    const [showCart, setShowCart] = useState(false)
+  
     
 
 

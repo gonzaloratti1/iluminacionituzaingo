@@ -1,4 +1,20 @@
 .cost{
     color: green;
+   
 }
 
+img{
+    height: 200px;
+    width: 200px;
+    vertical-align: text-bottom;
+}
+
+.detail-item{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.subtitulo{
+    text-align: center;
+    margin-top: 20px;
+}

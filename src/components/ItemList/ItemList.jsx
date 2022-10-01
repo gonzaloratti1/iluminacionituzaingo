@@ -1,7 +1,5 @@
 import React from 'react'
 import Item from '../Item/Item'
-import items from '../Utils/itemData/ItemData'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 const ItemList = ({ items }) => {
   

@@ -9,7 +9,7 @@ import LocalMallIcon from '@mui/icons-material/LocalMall';
 import { CartContext } from '../CartContext/CartContext';
 
 const color = yellow[500]
-const colorMain = "#212121"
+const colorMain = "#212121" 
 
 
 const NavbarComponent = () => {
@@ -28,21 +28,21 @@ const NavbarComponent = () => {
           Iluminacion Ituzaingo
         </Typography>
 
-        <Stack direction='row' spacing={1} marginRight={100}>
-          <Link  to="/category/10"><Button>
+        <Stack direction='row' spacing={1} marginRight={90}>
+          <Link  to="/category/Lamparas"><Button>
             <Typography color='black'>LAMPARAS</Typography>
           </Button></Link>
 
-          <Link to='/category/3'><Button>
+          <Link to='/category/Exterior'><Button>
             <Typography color='black'>INTERIOR</Typography>
           </Button></Link>
 
-         <Link  to='/category/2'><Button>
+         <Link  to='/category/Interior'><Button>
             <Typography color='black'>EXTERIOR</Typography>
           </Button></Link>
         </Stack>
-        <Badge badgeContent={totalProducts()} color="primary">
-        <LocalMallIcon style={{ color: 'black'}}/>
+        <Badge badgeContent={totalProducts()} color="primary" marginRight={40}>
+        <LocalMallIcon style={{ color: 'black'}} />
         </Badge>
       </Toolbar>
     </AppBar>

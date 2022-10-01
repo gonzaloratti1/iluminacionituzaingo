@@ -5,7 +5,7 @@ import NavbarComponent from '../Main/Navbar';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import Cart from '../Cart/Cart';
 import CartContextProvider from '../CartContext/CartContext';
-
+import Checkout from '../Checkout/Checkout';
 
 
 const Home = () => {
@@ -18,6 +18,7 @@ const Home = () => {
             <Route path='/category/:idCategory' element={<ItemListContainer/>} />
             <Route path='/item/:idItem' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Cart/>} />
+            <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </CartContextProvider>  

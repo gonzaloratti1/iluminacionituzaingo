@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import { firestoreFetchOne } from "../Utils/FirestoreFetch"
-import { getFirestore, doc, getDoc } from 'firebase/firestore'
+
 
 const ItemDetailContainer = () => {
   
@@ -17,23 +17,13 @@ const ItemDetailContainer = () => {
       
     }, [])
 
-    console.log(idItem)
-    //  useEffect(() => {
-    //     firestoreFetch(idCategory)
-    //     .then(result => setDatos(result))
-    //     .catch(err => console.log(err))
-    // }, [idCategory]);
 
-  // useEffect( () => {
-  //   customFetch(1, Items.find( item => item.id == idItem))
-  //   .then( result => setDato(result))
-  //   .catch( err => console.log(err))
-  // },  [idItem]) 
   
     return (
-      
+      <>
+      <h1 className='subtitulo'>DETALLE</h1>
     <ItemDetail item={data}/>
-      
+    </> 
   )
 }
 

@@ -20,15 +20,7 @@ const ItemListContainer = () => {
 
 
 
-    
-    // useEffect(() => { // la de siempre
-    //     customFetch(1, Items.filter(item => {
-    //         if (idCategory === undefined) return item;
-    //         return item.categoryId === idCategory
-    //     }))
-    //         .then(result => setDatos(result))
-    //         .catch(err => console.log(err))
-    // }, [idCategory]);
+
 
 
     return (

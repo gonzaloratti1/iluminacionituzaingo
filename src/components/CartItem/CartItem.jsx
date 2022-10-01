@@ -8,7 +8,7 @@ const CartItem = ({ item }) => {
     return (
         <>
         <div>
-            <img src={item.image} />
+            <img src={item.image} alt="" />
         <div>
             <p>Titulo: {item.name}</p>
             <p>Cantidad: {item.quantity}</p>

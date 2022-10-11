@@ -1,25 +1,32 @@
-import React from 'react'
-import { CartContext, useCartContext } from '../CartContext/CartContext'
+import React from "react";
+import { CartContext, useCartContext } from "../CartContext/CartContext";
+import "./CartItem.css";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 const CartItem = ({ item }) => {
-  
-    const { removeItem } = useCartContext(CartContext)
+  const { removeItem } = useCartContext(CartContext);
 
-    return (
-        <>
-        <div>
-            <img src={item.image} alt="" />
-        <div>
-            <p>Titulo: {item.name}</p>
-            <p>Cantidad: {item.quantity}</p>
-            <p>Precio: {item.cost}</p>
-            <p>Subtotal: {item.quantity * item.cost}</p>
-            <button onClick={() => removeItem(item.id)}>Eliminar</button>
+  return (
+    <>
+      <div className="container">
+        <img className="cart-image" src={item.image} alt="" />
+        <div className="content">
+          <div>
+            <h4 className="cart-name">{item.name}</h4>
+            <p className="cart-quantity">- Cantidad: {item.quantity}</p>
+            <p className="cart-cost">- Precio por unidad: $ {item.cost}</p>
+            <p className="cart-subtotal">
+              - Subtotal: $ {item.quantity * item.cost}
+            </p>
+            <DeleteOutlineIcon
+              onClick={() => removeItem(item.id)}
+              sx={{ marginLeft: 135, marginBottom: 2, cursor: "pointer" }}
+            ></DeleteOutlineIcon>
+          </div>
         </div>
-        </div>
+      </div>
+    </>
+  );
+};
 
-        </>
-  )
-}
-
-export default CartItem
+export default CartItem;

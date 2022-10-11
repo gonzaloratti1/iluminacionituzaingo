@@ -1,0 +1,27 @@
+.title {
+  text-align: center;
+  margin-left: 550px;
+  margin-right: 630px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.seguir-comprando {
+  padding: 10px 20px 30px;
+  margin-left: 10px;
+}
+
+.container-buttons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.total-price {
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+.container-confirm {
+  display: flex;
+}

@@ -1,20 +1,14 @@
-/* .container{
-    height: 100px;
-    width: 100px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-} */
-
-.counter{
-   justify-content: center;
-    
+.count-item {
+  justify-content: center;
+  padding: 20px 10px 30px;
 }
 
-.Add-item{
-    margin: auto;
-    padding-top: 20px;
-    padding: 10px 10px 20px 10px    ;
+.Add-item {
+  margin: auto;
+  padding-top: 20px;
+  padding: 10px 10px 20px 10px;
+}
+
+.shop-button {
+  margin-right: 200px;
 }

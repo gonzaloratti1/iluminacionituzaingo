@@ -1,48 +1,72 @@
 import React, { useState, useEffect } from "react";
-import "./ItemCount.css"
+import "./ItemCount.css";
+import Button from "@mui/material/Button";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+export const ItemCount = ({ initial, stock, onAdd }) => {
+  const [count, setCount] = useState(initial);
 
-export const ItemCount = ({initial, stock, onAdd}) => {
+  useEffect(() => {
+    setCount(initial);
+  }, []);
 
-    const [ count, setCount ] = useState(initial)
+  const suma = () => {
+    setCount(count + 1);
+  };
 
-    
+  const resta = () => {
+    setCount(count - 1);
+  };
 
-    useEffect(() => {
-       setCount(initial)
-    }, []);
+  return (
+    <div className="container-counter">
+      <div className="counter">
+        <Button
+          disabled={count <= 1}
+          onClick={resta}
+          color="error"
+          variant="contained"
+        >
+          {" "}
+          -{" "}
+        </Button>
 
+        <strong className="count-item">{count}</strong>
 
+        <Button
+          variant="contained"
+          disabled={count >= stock}
+          onClick={suma}
+          color="success"
+        >
+          {" "}
+          +{" "}
+        </Button>
 
-    const suma = () => { 
-        setCount( count + 1)
-    }
-    
+        {stock && count ? (
+          <Button
+            variant="contained"
+            color="success"
+            onClick={() => onAdd(count)}
+            sx={{ marginLeft: 25 }}
+            startIcon={<ShoppingCartIcon />}
+          >
+            {" "}
+            Agregar al Carrito{" "}
+          </Button>
+        ) : (
+          <Button
+            variant="contained"
+            color="success"
+            sx={{ marginLeft: 25 }}
+            startIcon={<ShoppingCartIcon />}
+          >
+            Agregar Al Carrito
+          </Button>
+        )}
+      </div>
+    </div>
+  );
+};
 
-    const resta = () => {
-        setCount( count - 1)
-    }
-
-
-
-    return (
-        <div className="container-counter">
-        
-        <div className="counter">
-        <button disabled={count <= 1} onClick={resta} className="btn btn-danger"> - </button>
-        
-            <span>{count}</span>
-        
-        <button  disabled={ count >= stock} onClick={suma} className="btn btn-success"> + </button>
-            
-            {
-                stock && count
-            ?    <button onClick={ () => onAdd(count)}> Agregar al carrito </button>
-            :    <button disabled>Agregar al carrito</button>
-            }
-            </div>
-        </div>
-    )
-}
-
-export default ItemCount
+export default ItemCount;

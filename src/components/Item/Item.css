@@ -1,25 +1,21 @@
-
-img{
-    
-    float: left;
-    left: 100px;
-    width: 200px;
-    margin-right: 1px;    
+.cost {
+  color: green;
+  position: relative;
 }
 
-.cost{
-    color: green;
-    position: relative;
-
+.titulo {
+  font-size: medium;
+  color: black;
 }
 
-.titulo{
-    font-size: medium;
-    color: black;
+.container a {
+  color: #07641a;
+  text-decoration: none;
 }
 
-/* .itemcount{
-    align-items: center;
-    align-content: center;
-    position: relative;
-} */
+a:link,
+a:visited,
+a:hover {
+  color: #000000;
+  text-decoration: none;
+}
